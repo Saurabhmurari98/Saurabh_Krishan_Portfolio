@@ -10880,6 +10880,22 @@ p {
     width: 100% !important; 
   }
 }
+/* Motorola Edge 40 (portrait mode) */
+@media only screen and (device-width: 393px) and (device-height: 854px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Your styles for Motorola Edge 40 in portrait mode */
+  .test1 {
+    width: 100% !important; 
+  }
+}
+
+/* Motorola Edge 40 (landscape mode) */
+@media only screen and (device-width: 854px) and (device-height: 393px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Your styles for Motorola Edge 40 in landscape mode */
+  .test1 {
+    width: 100% !important; 
+  }
+}
+
 
 @media screen and (min-width: 321px) and (max-width: 375px) {
   .test {
