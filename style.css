@@ -10867,6 +10867,19 @@ p {
     padding: 1px 1px ;
   }
 }
+@media only screen and (device-width: 430px) and (device-height: 932px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+  .test1 {
+    width: 100% !important; 
+  }
+ 
+}
+
+/* iPhone 14 Pro Max (landscape mode) */
+@media only screen and (device-width: 932px) and (device-height: 430px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3) {
+  .test1 {
+    width: 100% !important; 
+  }
+}
 
 @media screen and (min-width: 321px) and (max-width: 375px) {
   .test {
@@ -10880,7 +10893,7 @@ p {
 }
 @media screen and (min-width: 426px) and (max-width: 1024px) {
   .test1 {
-    width: 30% !important; 
+    width: 100% !important; 
   }
   .test{
     padding: 50px;
