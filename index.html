@@ -277,22 +277,31 @@
         /* =========================
         CLIENTS
         ========================= */
+/* =========================
+CLIENT ICON FIX
+========================= */
 
-        .client-icon{
-            width:80px;
-            height:80px;
-            border-radius:50%;
-            background:linear-gradient(45deg,#ffcc00,#ff6600);
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            margin-bottom:25px;
-        }
+.client-icon{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:linear-gradient(45deg,#ffcc00,#ff6600);
 
-        .client-icon i{
-            font-size:35px;
-            color:black;
-        }
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:0 auto 25px auto;   /* CENTER FIX */
+}
+
+.client-icon i{
+    font-size:32px;
+    color:black;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 
         /* =========================
         CONTACT
@@ -400,6 +409,87 @@ select.form-control:focus{
     color: white !important;
     border-color: #ffcc00 !important;
     box-shadow: 0 0 10px rgba(255,204,0,0.4);
+}
+
+/* =========================
+PROJECT SECTION PRO
+========================= */
+
+.project-card{
+    position:relative;
+    overflow:hidden;
+    transition:0.5s;
+}
+
+.project-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 0 35px rgba(255,204,0,0.15);
+}
+
+.project-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.project-icon{
+    width:75px;
+    height:75px;
+    border-radius:20px;
+
+    background:
+    linear-gradient(135deg,#ffcc00,#ff6600);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.project-icon i{
+    font-size:32px;
+    color:black;
+}
+
+.project-badge{
+    background:rgba(255,204,0,0.15);
+    color:#ffcc00;
+
+    padding:8px 18px;
+    border-radius:30px;
+
+    font-size:13px;
+    font-weight:600;
+}
+
+.project-content h3{
+    font-size:26px;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.project-content p{
+    color:#bdbdbd;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.project-tech{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.project-tech span{
+    padding:8px 16px;
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.08);
+
+    font-size:13px;
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,0.08);
 }
 
     </style>
@@ -749,35 +839,102 @@ select.form-control:focus{
 
     <!-- PROJECTS -->
 
-    <section id="projects">
+<!-- =========================
+PROFESSIONAL PROJECT SECTION
+========================= -->
 
-        <div class="container">
+<section id="projects">
 
-            <div class="section-title">
+    <div class="container">
 
-                <h2>Projects</h2>
+        <div class="section-title">
 
-                <p>
-                    Some featured work ✨
-                </p>
+            <h2>Featured Projects</h2>
+
+            <p>
+                Real-world applications & enterprise solutions crafted with modern technologies 🚀
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- PROJECT 1 -->
+
+            <div class="col-lg-4 col-md-6"
+                data-aos="fade-up">
+
+                <div class="glass-box project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fas fa-cart-shopping"></i>
+                        </div>
+
+                        <span class="project-badge">
+                            E-Commerce
+                        </span>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Dehati Fashion</h3>
+
+                        <p>
+                            A complete e-commerce solution with secure payment gateway,
+                            admin dashboard, order management and responsive UI experience.
+                        </p>
+
+                        <div class="project-tech">
+
+                            <span>Angular</span>
+                            <span>.NET Core</span>
+                            <span>SQL Server</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="row g-4">
+            <!-- PROJECT 2 -->
 
-                <div class="col-lg-4" data-aos="zoom-in">
+            <div class="col-lg-4 col-md-6"
+                data-aos="fade-up"
+                data-aos-delay="100">
 
-                    <div class="glass-box project-card">
+                <div class="glass-box project-card">
 
-                        <img src="dehatilogo1.png" alt="">
+                    <div class="project-top">
 
-                        <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
 
-                            <h4>Dehati Fashion</h4>
+                        <span class="project-badge">
+                            CRM System
+                        </span>
 
-                            <p>
-                                E-Commerce platform with payment integration.
-                            </p>
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Tiger CRM</h3>
+
+                        <p>
+                            Enterprise CRM platform designed for customer management,
+                            lead tracking, analytics and business workflow automation.
+                        </p>
+
+                        <div class="project-tech">
+
+                            <span>Angular</span>
+                            <span>.NET</span>
+                            <span>MongoDB</span>
 
                         </div>
 
@@ -785,39 +942,42 @@ select.form-control:focus{
 
                 </div>
 
-                <div class="col-lg-4" data-aos="zoom-in">
+            </div>
 
-                    <div class="glass-box project-card">
+            <!-- PROJECT 3 -->
 
-                        <img src="tiger1.png" alt="">
+            <div class="col-lg-4 col-md-6"
+                data-aos="fade-up"
+                data-aos-delay="200">
 
-                        <div class="project-content">
+                <div class="glass-box project-card">
 
-                            <h4>Tiger CRM</h4>
+                    <div class="project-top">
 
-                            <p>
-                                CRM management platform for businesses.
-                            </p>
-
+                        <div class="project-icon">
+                            <i class="fas fa-laptop-code"></i>
                         </div>
+
+                        <span class="project-badge">
+                            Software Solution
+                        </span>
 
                     </div>
 
-                </div>
+                    <div class="project-content">
 
-                <div class="col-lg-4" data-aos="zoom-in">
+                        <h3>Dehati IT Solution</h3>
 
-                    <div class="glass-box project-card">
+                        <p>
+                            Professional software & web solution platform
+                            delivering scalable business applications and digital services.
+                        </p>
 
-                        <img src="dehatiitt.png" alt="">
+                        <div class="project-tech">
 
-                        <div class="project-content">
-
-                            <h4>Dehati IT</h4>
-
-                            <p>
-                                Software solution and service platform.
-                            </p>
+                            <span>React</span>
+                            <span>PostgreSQL</span>
+                            <span>REST API</span>
 
                         </div>
 
@@ -829,7 +989,9 @@ select.form-control:focus{
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
  <!-- CLIENT PROJECTS -->
 
