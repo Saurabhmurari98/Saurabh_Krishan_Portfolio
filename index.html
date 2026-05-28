@@ -1,408 +1,374 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Saurabh Krishan | Portfolio</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="logo.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saurabh Krishan | Portfolio</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap"
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
 
-    <!-- AOS Animation -->
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <!-- Particles -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <style>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
+        html{
+            scroll-behavior:smooth;
         }
 
-        body {
-            background: #050505;
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            overflow-x: hidden;
+        body{
+            font-family:'Montserrat',sans-serif;
+            background:#050505;
+            color:white;
+            overflow-x:hidden;
         }
 
-        /* =======================
+        /* ===========================
         SCROLLBAR
-        ======================= */
+        =========================== */
 
-        ::-webkit-scrollbar {
-            width: 8px;
+        ::-webkit-scrollbar{
+            width:8px;
         }
 
-        ::-webkit-scrollbar-track {
-            background: #111;
+        ::-webkit-scrollbar-track{
+            background:#111;
         }
 
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(#ffcc00, #ff6600);
-            border-radius: 20px;
+        ::-webkit-scrollbar-thumb{
+            background:linear-gradient(#ffcc00,#ff6600);
+            border-radius:20px;
         }
 
-        /* =======================
+        /* ===========================
         PARTICLES
-        ======================= */
+        =========================== */
 
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+        #particles-js{
+            position:fixed;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            z-index:-1;
         }
 
-        /* =======================
+        /* ===========================
         NAVBAR
-        ======================= */
+        =========================== */
 
-        .navbar {
-            padding: 15px 0;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(12px);
+        .navbar{
+            background:rgba(0,0,0,0.5);
+            backdrop-filter:blur(10px);
+            padding:15px 0;
         }
 
-        .navbar-brand img {
-            width: 60px;
-            border-radius: 50%;
+        .navbar-brand{
+            color:#ffcc00 !important;
+            font-size:28px;
+            font-weight:800;
         }
 
-        .navbar-nav .nav-link {
-            color: white !important;
-            margin-left: 20px;
-            font-weight: 500;
-            position: relative;
-            transition: 0.4s;
+        .navbar-nav .nav-link{
+            color:white !important;
+            margin-left:20px;
+            transition:0.4s;
+            position:relative;
         }
 
-        .navbar-nav .nav-link:hover {
-            color: #ffcc00 !important;
+        .navbar-nav .nav-link:hover{
+            color:#ffcc00 !important;
         }
 
-        .navbar-nav .nav-link::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 0%;
-            height: 2px;
-            background: #ffcc00;
-            transition: 0.4s;
+        .navbar-nav .nav-link::after{
+            content:'';
+            position:absolute;
+            width:0%;
+            height:2px;
+            left:0;
+            bottom:-5px;
+            background:#ffcc00;
+            transition:0.4s;
         }
 
-        .navbar-nav .nav-link:hover::after {
-            width: 100%;
+        .navbar-nav .nav-link:hover::after{
+            width:100%;
         }
 
-        /* =======================
+        /* ===========================
         HERO SECTION
-        ======================= */
+        =========================== */
 
-        .masthead {
-            height: 100vh;
+        .hero{
+            height:100vh;
             background:
-                linear-gradient(rgba(0, 0, 0, 0.75),
-                    rgba(0, 0, 0, 0.75)),
-                url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            position: relative;
+            linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+            url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1974&auto=format&fit=crop');
+
+            background-size:cover;
+            background-position:center;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
         }
 
-        .hero-content {
-            width: 100%;
-        }
-
-        .masthead-subheading {
-            font-size: 30px;
-            color: #ffcc00;
-            margin-bottom: 20px;
-            animation: fadeDown 1s ease;
-        }
-
-        .masthead-heading {
-            font-size: 90px;
-            font-weight: 900;
+        .hero h1{
+            font-size:90px;
+            font-weight:900;
             text-shadow:
-                0 0 10px #ffcc00,
-                0 0 20px #ff6600,
-                0 0 50px #ff6600;
-            animation: zoomIn 1.2s ease;
+            0 0 10px #ffcc00,
+            0 0 20px #ff6600,
+            0 0 40px #ff6600;
         }
 
-        .hero-para {
-            margin-top: 20px;
-            font-size: 24px;
-            color: #ccc;
-            animation: fadeUp 1.5s ease;
+        .hero p{
+            font-size:24px;
+            margin-top:20px;
+            color:#ddd;
         }
 
-        .hero-btn {
-            margin-top: 30px;
-            background: linear-gradient(45deg, #ffcc00, #ff6600);
-            border: none;
-            color: black;
-            padding: 16px 45px;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: 0.4s;
+        .hero-btn{
+            margin-top:30px;
+            padding:15px 45px;
+            border:none;
+            border-radius:50px;
+            font-weight:bold;
+            background:linear-gradient(45deg,#ffcc00,#ff6600);
+            color:black;
+            transition:0.4s;
         }
 
-        .hero-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 0 25px #ffcc00;
+        .hero-btn:hover{
+            transform:translateY(-5px) scale(1.05);
+            box-shadow:0 0 25px #ffcc00;
         }
 
-        /* =======================
-        SECTION TITLE
-        ======================= */
+        /* ===========================
+        COMMON
+        =========================== */
 
-        .section-heading {
-            font-size: 50px;
-            font-weight: 800;
-            margin-bottom: 20px;
+        section{
+            padding:100px 0;
         }
 
-        .section-subheading {
-            color: #aaa !important;
+        .section-title{
+            text-align:center;
+            margin-bottom:60px;
         }
 
-        section {
-            padding: 100px 0;
+        .section-title h2{
+            font-size:50px;
+            font-weight:800;
         }
 
-        /* =======================
-        SERVICE BOX
-        ======================= */
-
-        .service-box {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            padding: 40px 25px;
-            transition: 0.5s;
-            height: 100%;
+        .section-title p{
+            color:#aaa;
+            margin-top:10px;
         }
 
-        .service-box:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 0 30px rgba(255, 204, 0, 0.3);
+        /* ===========================
+        GLASS BOX
+        =========================== */
+
+        .glass-box{
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.08);
+            border-radius:20px;
+            backdrop-filter:blur(10px);
+            transition:0.5s;
+            padding:35px 25px;
+            height:100%;
         }
 
-        .service-box i {
-            font-size: 55px;
-            color: #ffcc00;
-            margin-bottom: 25px;
+        .glass-box:hover{
+            transform:translateY(-10px);
+            box-shadow:0 0 30px rgba(255,204,0,0.25);
         }
 
-        .service-box h4 {
-            margin-bottom: 15px;
+        /* ===========================
+        SERVICES
+        =========================== */
+
+        .service-icon{
+            font-size:55px;
+            color:#ffcc00;
+            margin-bottom:25px;
         }
 
-        /* =======================
-        PORTFOLIO
-        ======================= */
+        /* ===========================
+        SKILLS
+        =========================== */
 
-        .portfolio-item {
-            overflow: hidden;
-            border-radius: 20px;
-            transition: 0.5s;
-            position: relative;
+        .skill-box{
+            text-align:center;
         }
 
-        .portfolio-item img {
-            transition: 0.5s;
-            width: 100%;
+        .skill-box i{
+            font-size:50px;
+            color:#ffcc00;
+            margin-bottom:20px;
         }
 
-        .portfolio-item:hover img {
-            transform: scale(1.1);
+        /* ===========================
+        EXPERIENCE
+        =========================== */
+
+        .timeline-box{
+            margin-bottom:30px;
         }
 
-        .portfolio-item:hover {
-            box-shadow: 0 0 30px rgba(255, 204, 0, 0.4);
+        .timeline-box h4{
+            color:#ffcc00;
         }
 
-        .portfolio-caption {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            text-align: center;
+        .timeline-box span{
+            color:#bbb;
+            font-size:14px;
         }
 
-        /* =======================
-        ABOUT
-        ======================= */
+        /* ===========================
+        PROJECTS
+        =========================== */
 
-        .timeline-box {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: 0.4s;
+        .project-card{
+            overflow:hidden;
         }
 
-        .timeline-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 25px rgba(255,255,255,0.1);
+        .project-card img{
+            width:100%;
+            border-radius:15px;
+            transition:0.5s;
         }
 
-        /* =======================
-        TEAM
-        ======================= */
-
-        .team-member {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 30px;
-            transition: 0.5s;
+        .project-card:hover img{
+            transform:scale(1.08);
         }
 
-        .team-member:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 25px rgba(255,204,0,0.2);
+        .project-content{
+            margin-top:20px;
         }
 
-        .team-member img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border: 5px solid #ffcc00;
+        /* ===========================
+        CLIENTS
+        =========================== */
+
+        .client-icon{
+            width:80px;
+            height:80px;
+            border-radius:50%;
+            background:linear-gradient(45deg,#ffcc00,#ff6600);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-bottom:25px;
         }
 
-        .btn-social {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
+        .client-icon i{
+            color:black;
+            font-size:35px;
         }
 
-        /* =======================
+        /* ===========================
         CONTACT
-        ======================= */
+        =========================== */
 
-        #contact {
-            background: linear-gradient(135deg, #111, #1d1d1d);
+        #contact{
+            background:linear-gradient(135deg,#111,#1a1a1a);
         }
 
-        .form-control {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            color: white;
-            padding: 15px;
-            margin-bottom: 20px;
+        .form-control{
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.08);
+            color:white;
+            padding:15px;
+            margin-bottom:20px;
         }
 
-        .form-control:focus {
-            background: rgba(255,255,255,0.08);
-            border-color: #ffcc00;
-            color: white;
-            box-shadow: none;
+        .form-control:focus{
+            background:rgba(255,255,255,0.08);
+            border-color:#ffcc00;
+            box-shadow:none;
+            color:white;
         }
 
-        textarea {
-            min-height: 180px;
+        textarea{
+            min-height:180px;
         }
 
-        /* =======================
+        /* ===========================
         FOOTER
-        ======================= */
+        =========================== */
 
-        footer {
-            background: black;
-            padding: 30px 0;
-            text-align: center;
-            color: #aaa;
+        footer{
+            background:black;
+            padding:30px 0;
+            text-align:center;
+            color:#999;
         }
 
-        /* =======================
-        ANIMATION
-        ======================= */
-
-        @keyframes fadeDown {
-            from {
-                opacity: 0;
-                transform: translateY(-40px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .social-icons a{
+            width:45px;
+            height:45px;
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:50%;
+            background:#111;
+            color:white;
+            margin:0 8px;
+            transition:0.4s;
+            text-decoration:none;
         }
 
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .social-icons a:hover{
+            background:#ffcc00;
+            color:black;
+            transform:translateY(-5px);
         }
 
-        @keyframes zoomIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
+        /* ===========================
+        MOBILE
+        =========================== */
+
+        @media(max-width:768px){
+
+            .hero h1{
+                font-size:50px;
             }
 
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        /* =======================
-        RESPONSIVE
-        ======================= */
-
-        @media(max-width:768px) {
-
-            .masthead-heading {
-                font-size: 50px;
+            .hero p{
+                font-size:18px;
             }
 
-            .hero-para {
-                font-size: 18px;
-            }
-
-            .section-heading {
-                font-size: 35px;
+            .section-title h2{
+                font-size:35px;
             }
 
         }
 
     </style>
+
 </head>
 
 <body>
@@ -411,27 +377,30 @@
     <div id="particles-js"></div>
 
     <!-- NAVBAR -->
+
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
         <div class="container">
 
             <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="">
+                Saurabh Krishan
             </a>
 
-            <button class="navbar-toggler" type="button"
+            <button class="navbar-toggler"
+                type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#navbarResponsive">
+                data-bs-target="#navbarNav">
 
                 <i class="fas fa-bars"></i>
 
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="collapse navbar-collapse" id="navbarNav">
 
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#home">Home</a>
                     </li>
 
                     <li class="nav-item">
@@ -439,15 +408,19 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Projects</a>
+                        <a class="nav-link" href="#skills">Skills</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#experience">Experience</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#team">Team</a>
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#clients">Clients</a>
                     </li>
 
                     <li class="nav-item">
@@ -459,22 +432,18 @@
             </div>
 
         </div>
+
     </nav>
 
     <!-- HERO -->
-    <header class="masthead">
 
-        <div class="container hero-content">
+    <section class="hero" id="home">
 
-            <div class="masthead-subheading">
-                Welcome To My Portfolio ✨
-            </div>
+        <div class="container" data-aos="zoom-in">
 
-            <div class="masthead-heading">
-                Saurabh Krishan
-            </div>
+            <h1>Saurabh Krishan</h1>
 
-            <p class="hero-para">
+            <p>
                 Full Stack Developer • Angular • React • .NET Core
             </p>
 
@@ -484,21 +453,20 @@
 
         </div>
 
-    </header>
+    </section>
 
     <!-- SERVICES -->
+
     <section id="services">
 
         <div class="container">
 
-            <div class="text-center mb-5">
+            <div class="section-title">
 
-                <h2 class="section-heading">
-                    My Services
-                </h2>
+                <h2>Services</h2>
 
-                <p class="section-subheading">
-                    Modern solutions for modern businesses.
+                <p>
+                    Modern web solutions for businesses
                 </p>
 
             </div>
@@ -507,15 +475,15 @@
 
                 <div class="col-lg-4" data-aos="fade-up">
 
-                    <div class="service-box text-center">
+                    <div class="glass-box text-center">
 
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-code service-icon"></i>
 
                         <h4>Web Development</h4>
 
                         <p>
-                            Modern responsive websites using Angular,
-                            React, .NET Core and latest technologies.
+                            High performance websites using
+                            Angular, React and .NET Core.
                         </p>
 
                     </div>
@@ -524,15 +492,14 @@
 
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
 
-                    <div class="service-box text-center">
+                    <div class="glass-box text-center">
 
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-mobile-alt service-icon"></i>
 
                         <h4>Responsive Design</h4>
 
                         <p>
-                            Fully mobile friendly designs with
-                            premium UI and smooth experience.
+                            Premium mobile responsive modern UI.
                         </p>
 
                     </div>
@@ -541,15 +508,14 @@
 
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
 
-                    <div class="service-box text-center">
+                    <div class="glass-box text-center">
 
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-shield-alt service-icon"></i>
 
                         <h4>Cyber Security</h4>
 
                         <p>
-                            Secure applications with optimized
-                            backend architecture and protection.
+                            Secure applications with optimized architecture.
                         </p>
 
                     </div>
@@ -562,16 +528,216 @@
 
     </section>
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio">
+    <!-- SKILLS -->
+
+    <section id="skills">
 
         <div class="container">
 
-            <div class="text-center mb-5">
+            <div class="section-title">
 
-                <h2 class="section-heading">
-                    Projects
-                </h2>
+                <h2>Skills</h2>
+
+                <p>
+                    Technologies I work with daily 🚀
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in">
+
+                    <div class="glass-box skill-box">
+
+                        <i class="fab fa-angular"></i>
+
+                        <h4>Angular</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in">
+
+                    <div class="glass-box skill-box">
+
+                        <i class="fab fa-react"></i>
+
+                        <h4>React</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in">
+
+                    <div class="glass-box skill-box">
+
+                        <i class="fas fa-code"></i>
+
+                        <h4>.NET Core</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in">
+
+                    <div class="glass-box skill-box">
+
+                        <i class="fas fa-database"></i>
+
+                        <h4>SQL</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in">
+
+                    <div class="glass-box skill-box">
+
+                        <i class="fab fa-js"></i>
+
+                        <h4>JavaScript</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in">
+
+                    <div class="glass-box skill-box">
+
+                        <i class="fab fa-html5"></i>
+
+                        <h4>HTML5</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in">
+
+                    <div class="glass-box skill-box">
+
+                        <i class="fab fa-css3-alt"></i>
+
+                        <h4>CSS3</h4>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in">
+
+                    <div class="glass-box skill-box">
+
+                        <i class="fab fa-github"></i>
+
+                        <h4>GitHub</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Experience</h2>
+
+                <p>
+                    My professional journey 💼
+                </p>
+
+            </div>
+
+            <div class="glass-box timeline-box" data-aos="fade-right">
+
+                <h3>Tectonics Technology</h3>
+
+                <h4>Software Engineer</h4>
+
+                <span>March 2025 - Present • Remote</span>
+
+                <p class="mt-3">
+                    Working on Angular, React,
+                    .NET Core, SQL and PostgreSQL applications.
+                </p>
+
+            </div>
+
+            <div class="glass-box timeline-box" data-aos="fade-left">
+
+                <h3>EdsyTech</h3>
+
+                <h4>Software Engineer</h4>
+
+                <span>Aug 2024 - Feb 2025 • Ludhiana</span>
+
+                <p class="mt-3">
+                    Developed enterprise CRM systems and APIs.
+                </p>
+
+            </div>
+
+            <div class="glass-box timeline-box" data-aos="fade-right">
+
+                <h3>Chetu Inc.</h3>
+
+                <h4>Software Engineer</h4>
+
+                <span>July 2023 - July 2024 • Noida</span>
+
+                <p class="mt-3">
+                    Worked on CRM dashboards and custom applications.
+                </p>
+
+            </div>
+
+            <div class="glass-box timeline-box" data-aos="fade-left">
+
+                <h3>Web Impetus</h3>
+
+                <h4>Web Developer Intern</h4>
+
+                <span>Jan 2023 - July 2023 • Noida</span>
+
+                <p class="mt-3">
+                    Worked on PHP, WordPress and responsive websites.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Projects</h2>
+
+                <p>
+                    Some featured work ✨
+                </p>
 
             </div>
 
@@ -579,15 +745,17 @@
 
                 <div class="col-lg-4" data-aos="zoom-in">
 
-                    <div class="portfolio-item">
+                    <div class="glass-box project-card">
 
                         <img src="dehatilogo1.png" alt="">
 
-                        <div class="portfolio-caption">
+                        <div class="project-content">
 
                             <h4>Dehati Fashion</h4>
 
-                            <p>E-Commerce Platform</p>
+                            <p>
+                                E-Commerce platform with payment integration.
+                            </p>
 
                         </div>
 
@@ -595,35 +763,39 @@
 
                 </div>
 
-                <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-lg-4" data-aos="zoom-in">
 
-                    <div class="portfolio-item">
-
-                        <img src="dehatiitt.png" alt="">
-
-                        <div class="portfolio-caption">
-
-                            <h4>Dehati IT</h4>
-
-                            <p>Software Industry</p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-
-                    <div class="portfolio-item">
+                    <div class="glass-box project-card">
 
                         <img src="tiger1.png" alt="">
 
-                        <div class="portfolio-caption">
+                        <div class="project-content">
 
                             <h4>Tiger CRM</h4>
 
-                            <p>CRM Solution</p>
+                            <p>
+                                CRM management platform for businesses.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4" data-aos="zoom-in">
+
+                    <div class="glass-box project-card">
+
+                        <img src="dehatiitt.png" alt="">
+
+                        <div class="project-content">
+
+                            <h4>Dehati IT</h4>
+
+                            <p>
+                                Software solution and service platform.
+                            </p>
 
                         </div>
 
@@ -637,100 +809,79 @@
 
     </section>
 
-    <!-- ABOUT -->
-    <section id="about">
+    <!-- CLIENT PROJECTS -->
+
+    <section id="clients">
 
         <div class="container">
 
-            <div class="text-center mb-5">
+            <div class="section-title">
 
-                <h2 class="section-heading">
-                    Experience
-                </h2>
-
-            </div>
-
-            <div class="timeline-box" data-aos="fade-right">
-
-                <h4>Software Engineer - Tectonics Technology</h4>
+                <h2>Client Projects</h2>
 
                 <p>
-                    Working on Angular, React, .NET Core,
-                    SQL and PostgreSQL applications.
+                    Premium solutions delivered to clients
                 </p>
-
-            </div>
-
-            <div class="timeline-box" data-aos="fade-left">
-
-                <h4>Software Engineer - EdsyTech</h4>
-
-                <p>
-                    Developed scalable enterprise applications
-                    with modern frontend and backend technologies.
-                </p>
-
-            </div>
-
-            <div class="timeline-box" data-aos="fade-right">
-
-                <h4>Software Engineer - Chetu Inc.</h4>
-
-                <p>
-                    Worked on CRM systems and custom enterprise
-                    software solutions.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- TEAM -->
-    <section id="team">
-
-        <div class="container">
-
-            <div class="text-center mb-5">
-
-                <h2 class="section-heading">
-                    Team
-                </h2>
 
             </div>
 
             <div class="row g-4">
 
-                <div class="col-lg-4" data-aos="flip-left">
+                <div class="col-lg-4" data-aos="fade-up">
 
-                    <div class="team-member text-center">
+                    <div class="glass-box">
 
-                        <img class="rounded-circle mb-4"
-                            src="sau.png" alt="">
+                        <div class="client-icon">
 
-                        <h4>Saurabh Krishan</h4>
-
-                        <p>Full Stack Developer</p>
-
-                        <div>
-
-                            <a class="btn btn-dark btn-social mx-1"
-                                href="#">
-                                <i class="fab fa-github"></i>
-                            </a>
-
-                            <a class="btn btn-dark btn-social mx-1"
-                                href="#">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-
-                            <a class="btn btn-dark btn-social mx-1"
-                                href="#">
-                                <i class="fab fa-instagram"></i>
-                            </a>
+                            <i class="fas fa-store"></i>
 
                         </div>
+
+                        <h4>E-Commerce Solution</h4>
+
+                        <p>
+                            Full online store with admin dashboard.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up">
+
+                    <div class="glass-box">
+
+                        <div class="client-icon">
+
+                            <i class="fas fa-chart-line"></i>
+
+                        </div>
+
+                        <h4>CRM Dashboard</h4>
+
+                        <p>
+                            Lead management and sales analytics platform.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up">
+
+                    <div class="glass-box">
+
+                        <div class="client-icon">
+
+                            <i class="fas fa-laptop-code"></i>
+
+                        </div>
+
+                        <h4>Custom Software</h4>
+
+                        <p>
+                            Enterprise applications tailored for clients.
+                        </p>
 
                     </div>
 
@@ -743,24 +894,22 @@
     </section>
 
     <!-- CONTACT -->
+
     <section id="contact">
 
         <div class="container">
 
-            <div class="text-center mb-5">
+            <div class="section-title">
 
-                <h2 class="section-heading text-white">
-                    Contact Me
-                </h2>
+                <h2>Contact Me</h2>
+
+                <p>
+                    Let's build something amazing 🚀
+                </p>
 
             </div>
 
-            <form action="https://api.web3forms.com/submit"
-                method="POST">
-
-                <input type="hidden"
-                    name="access_key"
-                    value="YOUR_WEB3FORM_KEY">
+            <form>
 
                 <div class="row">
 
@@ -768,8 +917,7 @@
 
                         <input type="text"
                             class="form-control"
-                            placeholder="Your Name"
-                            required>
+                            placeholder="Your Name">
 
                     </div>
 
@@ -777,8 +925,7 @@
 
                         <input type="email"
                             class="form-control"
-                            placeholder="Your Email"
-                            required>
+                            placeholder="Your Email">
 
                     </div>
 
@@ -793,7 +940,7 @@
 
                 <div class="text-center">
 
-                    <button class="btn hero-btn mt-4">
+                    <button class="btn hero-btn">
                         Send Message 🚀
                     </button>
 
@@ -806,12 +953,37 @@
     </section>
 
     <!-- FOOTER -->
+
     <footer>
 
         <div class="container">
 
+            <h4 class="mb-4">
+                Saurabh Krishan
+            </h4>
+
+            <div class="social-icons mb-4">
+
+                <a href="#">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+            </div>
+
             <p>
-                © 2026 Saurabh Krishan | All Rights Reserved
+                © 2026 All Rights Reserved | Saurabh Krishan
             </p>
 
         </div>
@@ -826,12 +998,14 @@
 
     <script>
         AOS.init({
-            duration: 1000,
-            once: true
+            duration:1000,
+            once:true
         });
     </script>
 
     <!-- PARTICLES -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <script>
 
         particlesJS("particles-js", {
@@ -872,4 +1046,3 @@
 </body>
 
 </html>
-```
