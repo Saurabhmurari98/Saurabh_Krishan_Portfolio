@@ -355,27 +355,31 @@ PROJECT SECTION
     box-shadow:0 0 35px rgba(255,204,0,0.15);
 }
 
+/* =========================
+PROJECT SECTION FIX
+========================= */
+
 .project-top{
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
     gap:15px;
     margin-bottom:25px;
+    width:100%;
 }
 
 .project-icon{
     width:75px;
     height:75px;
-    border-radius:22px;
+    min-width:75px;
 
-    background:
-    linear-gradient(135deg,#ffcc00,#ff6600);
+    border-radius:20px;
+
+    background:linear-gradient(135deg,#ffcc00,#ff6600);
 
     display:flex;
     align-items:center;
     justify-content:center;
-
-    flex-shrink:0;
 }
 
 .project-icon i{
@@ -388,11 +392,44 @@ PROJECT SECTION
     color:#ffcc00;
 
     padding:8px 18px;
+
     border-radius:30px;
 
     font-size:13px;
     font-weight:600;
-    text-align:center;
+
+    white-space:nowrap;
+}
+
+/* =========================
+MOBILE FIX
+========================= */
+
+@media(max-width:768px){
+
+    .project-top{
+        flex-direction:row !important;
+        align-items:center !important;
+        justify-content:space-between !important;
+        flex-wrap:nowrap !important;
+    }
+
+    .project-icon{
+        width:58px;
+        height:58px;
+        min-width:58px;
+        border-radius:16px;
+    }
+
+    .project-icon i{
+        font-size:22px;
+    }
+
+    .project-badge{
+        font-size:11px;
+        padding:6px 12px;
+    }
+
 }
 
 .project-content h3{
@@ -776,6 +813,8 @@ SMALL MOBILE
     }
 
 }
+
+
 
 </style>
 
